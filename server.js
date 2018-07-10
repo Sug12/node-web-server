@@ -32,8 +32,9 @@ var app = express();
               }
             });
          next();
-
     });
+
+
 
  // app.use((req,res,next)=>
  // {
@@ -55,9 +56,16 @@ app.get('/',(req, res) =>{
 //handler for request of url of about
 app.get('/about',(req,res) => {
 	res.render('about.hbs',{
-		pageTitle: 'About Page',
+		pageTitle: 'About Page'
 		
 	});
+});
+
+
+app.get('/projects',(req,res) => {
+  res.render('projects.hbs',{
+    pageTitle : "Projects"
+  });
 });
 
 app.listen(port,()=>{
